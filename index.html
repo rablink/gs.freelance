@@ -98,6 +98,7 @@
       width: 40px;
       height: 40px;
     }
+    
     .testimonial-img {
       width: 20%;
       border-radius: 10px;
@@ -134,8 +135,20 @@
   border-radius: 10px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
-
+.testimonial-slider1 {
+  width: 50%;
+  max-width: 600px;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
 .slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 100%;
+}
+.slides1 {
   display: flex;
   transition: transform 0.5s ease-in-out;
   width: 100%;
@@ -190,6 +203,14 @@
 }
 
 .slides img {
+  min-width: 100%;
+  max-width: 300px;
+  height: auto;
+  margin: 0 auto;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.slides1 img {
   min-width: 100%;
   max-width: 300px;
   height: auto;
@@ -591,7 +612,12 @@ Setelah join nanti akan langsung masuk grup bimbingan dan mendapatkan full bimbi
     Video singkat testi
   </p>
 </section>
+<section>
+   <h2 style="color: #000000;">FASILITAS GRUP</h2>
+<img src="10.jpg" alt="w" style="max-width: 90%; height: auto; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+<img src="11.jpg" alt="Pwwenjelasan Program" style="max-width: 90%; height: auto; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
 
+  </section>
 
   <section>
   <h2 class="section-title">Testimoni</h2>
@@ -605,6 +631,25 @@ Setelah join nanti akan langsung masuk grup bimbingan dan mendapatkan full bimbi
       <img src="testimoni6.jpg" alt="Testimoni 6">
       <img src="testimoni7.jpg" alt="Testimoni 7">
       <img src="testimoni8.jpg" alt="Testimoni 8">
+       <img src="testimoni9.jpg" alt="Testimoni 8">
+        <img src="testimoni10.jpg" alt="Testimoni 8">
+         <img src="testimoni11.jpg" alt="Testimoni 8">
+          <img src="testimoni12.jpg" alt="Testimoni 8">
+    </div>
+  </div>
+</section>
+<section>
+  <h2 class="section-title">BUKTI JOIN</h2>
+  <div class="testimonial-slider">
+    <div class="slides1">
+      <img src="1.jpg" alt="Testimoni 1">
+      <img src="2.jpg" alt="Testimoni 2">
+      <img src="3.jpg" alt="Testimoni 3">
+      <img src="4.jpg" alt="Testimoni 4">
+      <img src="5.jpg" alt="Testimoni 5">
+      <img src="6.jpg" alt="Testimoni 6">
+      <img src="7.jpg" alt="Testimoni 7">
+      <img src="8.jpg" alt="Testimoni 8">
     </div>
   </div>
 </section>
@@ -764,7 +809,16 @@ Setelah join nanti akan langsung masuk grup bimbingan dan mendapatkan full bimbi
      slides.style.transform = `translateX(-${currentIndex * 100}%)`;
   }, 1100); // ganti gambar setiap 3 detik
 </script>
+ <script>
+  let currentIndex1 = 0;
+  const slides1 = document.querySelector('.slides1');
+  const totalSlides1 = slides1.children.length;
 
+  setInterval(() => {
+    currentIndex1 = (currentIndex + 1) % totalSlides1;
+     slides1.style.transform = `translateX(-${currentIndex * 100}%)`;
+  }, 1100); // ganti gambar setiap 3 detik
+</script>
 <script>
   const faqItems = document.querySelectorAll('.faq-item');
 
